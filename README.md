@@ -31,6 +31,12 @@ Checks: `npm run check` (types, lint, tests) and `npm run build`.
 - [ ] Deployed, with one small live trade verified
 - [ ] Legal review before real money
 
+## Where we left off (Oct 14, 2026)
+
+1. In `Downloads\fade-backtest`, run `python fetch_polymarket.py --out data_full` (several hours; set `$env:PYTHONUTF8=1` first in a new window).
+2. When it prints `Done.`, run `python backtest.py --data data_full` and `python backtest.py --data data_full --min-price 0.5 --out results_favorites`, and share both outputs.
+3. Deploy the site with [`docs/DEPLOY.md`](docs/DEPLOY.md).
+
 ## House rules
 
 Wallets, not people: addresses only, never linked to identities, removed on request, never listed under 20 resolved bets. Contra never holds funds or keys.
