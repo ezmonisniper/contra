@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    name: Website (types, lint, tests, build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+
+  backtest:
+    name: Backtest (simulated markets)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backtest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Null world must not show a fake edge
+        run: |
+          python simulate.py null --out sim_null
+          python backtest.py --data sim_null --out res_null | tee out.txt
+          ! grep -q "Real signal" out.txt
+      - name: Planted edge must be found
+        run: |
+          python simulate.py antiskill --out sim_anti
+          python backtest.py --data sim_anti --out res_anti | tee out.txt
+          grep -q "Real signal" out.txt
+      - name: Site export matches the website's schema shape
+        run: python -I export_site_data.py --data sim_anti --results res_anti --no-network --out /tmp/fade-list.json

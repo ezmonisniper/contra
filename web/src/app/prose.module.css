@@ -1,0 +1,27 @@
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 760px;
+  padding-top: 48px;
+}
+
+.prose h2 {
+  margin-top: 16px;
+}
+
+.prose p,
+.prose li {
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 27px;
+}
+
+.prose ol,
+.prose ul {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

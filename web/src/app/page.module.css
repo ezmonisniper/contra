@@ -1,0 +1,50 @@
+.hero {
+  padding: 48px 0 24px;
+}
+
+.stats {
+  padding-bottom: 32px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.walletCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.walletCell img {
+  width: 20px;
+  height: 20px;
+}
+
+.walletLink {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.walletLink:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+.twoLine {
+  display: flex;
+  flex-direction: column;
+}
+
+.explain {
+  padding: 32px 0 0;
+}
+
+.empty {
+  padding: 32px 20px;
+  color: var(--ink-muted);
+}

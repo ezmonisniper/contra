@@ -1,0 +1,116 @@
+{
+  "generatedAt": "2026-10-14T06:00:00Z",
+  "sample": true,
+  "windowDays": 90,
+  "confidencePrice": 0.8,
+  "stats": {
+    "walletsTracked": null,
+    "flagged": null,
+    "backtest": null
+  },
+  "policy": {
+    "minFadePrice": 0.5,
+    "maxFadePrice": 0.97
+  },
+  "wallets": [
+    {
+      "address": "0x01decb5d53df10257f77f58a6fc83af19283f82b",
+      "sigma": -3.4,
+      "resolvedBets": 58,
+      "markets": 41,
+      "confBets": 31,
+      "confLosses": 14,
+      "expectedConfLosses": 4.2,
+      "roi": -0.31,
+      "worstCall": { "question": "Sample market: Will the Fed cut rates in December?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.91, "won": false, "resolvedAt": "2026-10-02T18:00:00Z" },
+      "recent": [
+        { "question": "Sample market: Will the Fed cut rates in December?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.91, "won": false, "resolvedAt": "2026-10-02T18:00:00Z" },
+        { "question": "Sample market: Will the bill pass the Senate this month?", "outcome": "No", "outcomeIndex": 1, "otherOutcome": "Yes", "price": 0.84, "won": false, "resolvedAt": "2026-09-28T21:00:00Z" },
+        { "question": "Sample market: Will the launch happen before Friday?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.62, "won": true, "resolvedAt": "2026-09-24T16:00:00Z" },
+        { "question": "Sample market: Will the album top the chart this week?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.88, "won": false, "resolvedAt": "2026-09-19T04:00:00Z" }
+      ],
+      "openBets": [
+        { "question": "Sample market: Will the candidate win the primary?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.27, "placedAt": "2026-10-12T15:20:00Z", "conditionId": "0x6aaad5430eebf18d9786314403ac3a8d9b107a31054ddbccb0a1f7b6f2cde3f6", "slug": "sample-candidate-primary" },
+        { "question": "Sample market: Will the team win the final?", "outcome": "No", "outcomeIndex": 1, "otherOutcome": "Yes", "price": 0.86, "placedAt": "2026-10-13T01:05:00Z", "conditionId": "0x726c6066a7f44c1c8856ec53bbfdde29d29d92e1901a5a53863ac4995cdfd80d", "slug": "sample-team-final" }
+      ]
+    },
+    {
+      "address": "0xcd9038ecf3278213b0c04e7ec482aa4eb2f7c3e8",
+      "sigma": -3.1,
+      "resolvedBets": 47,
+      "markets": 33,
+      "confBets": 24,
+      "confLosses": 11,
+      "expectedConfLosses": 3.3,
+      "roi": -0.27,
+      "worstCall": { "question": "Sample market: Will the team win the final?", "outcome": "No", "outcomeIndex": 1, "otherOutcome": "Yes", "price": 0.84, "won": false, "resolvedAt": "2026-10-05T03:00:00Z" },
+      "recent": [
+        { "question": "Sample market: Will the team win the final?", "outcome": "No", "outcomeIndex": 1, "otherOutcome": "Yes", "price": 0.84, "won": false, "resolvedAt": "2026-10-05T03:00:00Z" },
+        { "question": "Sample market: Will it rain in the city on Saturday?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.55, "won": true, "resolvedAt": "2026-09-27T23:00:00Z" }
+      ],
+      "openBets": [
+        { "question": "Sample market: Will the price close above the threshold on Dec 31?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.31, "placedAt": "2026-10-11T09:40:00Z", "conditionId": "0xe280dc0a3502471e85ccb1aff4157631d1cd85d95a45351ebe7a4d5fff0c8495", "slug": "sample-price-threshold" }
+      ]
+    },
+    {
+      "address": "0xf091487019a2ed0104a644700c5a43ff7a228c20",
+      "sigma": -2.9,
+      "resolvedBets": 63,
+      "markets": 45,
+      "confBets": 22,
+      "confLosses": 9,
+      "expectedConfLosses": 2.9,
+      "roi": -0.22,
+      "worstCall": { "question": "Sample market: Will the launch happen before Friday?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.93, "won": false, "resolvedAt": "2026-09-30T12:00:00Z" },
+      "recent": [
+        { "question": "Sample market: Will the launch happen before Friday?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.93, "won": false, "resolvedAt": "2026-09-30T12:00:00Z" }
+      ],
+      "openBets": [
+        { "question": "Sample market: Will the merger close this year?", "outcome": "No", "outcomeIndex": 1, "otherOutcome": "Yes", "price": 0.22, "placedAt": "2026-10-12T20:15:00Z", "conditionId": "0xfa5dc640ef2ef7753ba4b1d8a0d46de78dfc8e40cb80affc9340af88abdd07ef", "slug": "sample-merger-close" }
+      ]
+    },
+    {
+      "address": "0x6676701b8b1306c913ca544e81c9b4fc8f3f74a7",
+      "sigma": -2.7,
+      "resolvedBets": 41,
+      "markets": 29,
+      "confBets": 19,
+      "confLosses": 8,
+      "expectedConfLosses": 2.6,
+      "roi": -0.19,
+      "worstCall": null,
+      "recent": [],
+      "openBets": [
+        { "question": "Sample market: Will over 2.5 goals be scored tonight?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.41, "placedAt": "2026-10-13T17:30:00Z", "conditionId": "0x76fdc46bcdd4af452a9871f424561b2204b2329fe5f76a641917c527ba391f41", "slug": "sample-over-goals" }
+      ]
+    },
+    {
+      "address": "0xdda82b687f08973ee771c6741f0d771a259b88a9",
+      "sigma": -2.4,
+      "resolvedBets": 35,
+      "markets": 27,
+      "confBets": 18,
+      "confLosses": 7,
+      "expectedConfLosses": 2.4,
+      "roi": -0.16,
+      "worstCall": null,
+      "recent": [],
+      "openBets": []
+    },
+    {
+      "address": "0x46fac156f6eb751bf69f9a605aaa1064b377f222",
+      "sigma": -2.1,
+      "resolvedBets": 29,
+      "markets": 22,
+      "confBets": 17,
+      "confLosses": 6,
+      "expectedConfLosses": 2.1,
+      "roi": -0.12,
+      "worstCall": null,
+      "recent": [],
+      "openBets": [
+        { "question": "Sample market: Will the agency approve the drug by March?", "outcome": "Yes", "outcomeIndex": 0, "otherOutcome": "No", "price": 0.12, "placedAt": "2026-10-10T13:00:00Z", "conditionId": "0x0afda7b883ad2580cd8291a1c7c7545d3c95a3a60265b0a12a0013e37b16e3ef", "slug": "sample-drug-approval" }
+      ]
+    }
+  ]
+}

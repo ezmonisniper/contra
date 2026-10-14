@@ -14,8 +14,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
@@ -220,7 +220,17 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Contra: downloaded data and backtest output (large, regenerable)
-data/
-results/
-sim_*/
-res_*/
+backtest/data*/
+backtest/results*/
+backtest/sim_*/
+backtest/res_*/
+
+# Website
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+web/next-env.d.ts
+.env*
+!.env.example

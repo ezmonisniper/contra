@@ -1,0 +1,260 @@
+.container {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.card {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.display {
+  font-size: 56px;
+  line-height: 60px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.heading {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--ink-muted);
+  max-width: 640px;
+}
+
+.muted {
+  color: var(--ink-muted);
+}
+
+.caption {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink-muted);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.figure {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+.figureLg {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.gain {
+  color: var(--gain);
+}
+
+.loss {
+  color: var(--loss);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.primary {
+  composes: button;
+  background: var(--brand);
+  color: #ffffff;
+  border: 0;
+}
+
+.primary:hover:not(:disabled) {
+  background: #1a33b0;
+  color: #ffffff;
+}
+
+.secondary {
+  composes: button;
+  background: var(--surface-raised);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+
+.secondary:hover:not(:disabled) {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.ghost {
+  composes: button;
+  background: transparent;
+  color: var(--ink-muted);
+  border: 0;
+  padding: 0 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.notice {
+  align-self: flex-start;
+  background: var(--brand-tint);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.tableWrap {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.table caption {
+  text-align: left;
+  padding: 16px 20px 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.table th {
+  text-align: left;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  padding: 16px 12px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.table th:first-child,
+.table td:first-child {
+  padding-left: 20px;
+}
+
+.table th:last-child,
+.table td:last-child {
+  padding-right: 20px;
+}
+
+.right {
+  text-align: right;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input {
+  min-height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  color: var(--ink);
+  padding: 0 12px;
+  font-family: var(--font-mono);
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  .display {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  .title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
