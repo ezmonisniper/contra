@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Contra: downloaded data and backtest output (large, regenerable)
+data/
+results/
+sim_*/
+res_*/
